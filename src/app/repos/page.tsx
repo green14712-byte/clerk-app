@@ -5,7 +5,14 @@ import { FaStar, FaCodeBranch, FaEye } from 'react-icons/fa'
 const username = 'green14712-byte'
 
 export default async function ReposPage() {
-  const response = await fetch(`https://api.github.com/users/${username}/repos`)
+  const response = await fetch(
+    `https://api.github.com/users/${username}/repos`,
+    {
+      headers: {
+        Authorization: `token ${process.env.GITHUB_ACCES_TOKEN}`,
+      },
+    }
+  )
 
   await new Promise((resolve) => setTimeout(resolve, 1000))
   const repos = await response.json()
