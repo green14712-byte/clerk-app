@@ -38,6 +38,12 @@ export default function Header() {
                 href="/dashboard"
                 className="text-gray-300 hover:text-white mr-4"
               >
+                <Link
+                  href="/courses"
+                  className="text-gray-300 hover:text-white mr-4"
+                >
+                  Courses
+                </Link>
                 Dashboard-S
               </Link>
               <Link
